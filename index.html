@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harini M | Portfolio</title>
+
+<style>
+:root{
+  --primary:#0ea5e9;
+  --dark:#020617;
+  --light:#f8fafc;
+  --muted:#64748b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--light);color:var(--dark);}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#ffffffdd;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #e2e8f0;
+  z-index:1000;
+}
+.nav-wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+nav a{
+  margin-left:18px;
+  text-decoration:none;
+  font-weight:600;
+  color:#334155;
+}
+nav a:hover{color:var(--primary);}
+
+/* ===== LAYOUT ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:120px 20px 80px;
+}
+section{margin-bottom:90px;}
+h2{font-size:34px;margin-bottom:24px;}
+p{color:#334155;}
+
+/* ===== HERO ===== */
+.hero h1{font-size:48px;}
+.hero span{color:var(--primary);}
+.hero p{max-width:650px;margin-top:12px;font-size:18px;}
+
+.btn{
+  display:inline-block;
+  padding:12px 22px;
+  background:var(--primary);
+  color:#fff;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+.btn.outline{
+  background:transparent;
+  color:var(--primary);
+  border:2px solid var(--primary);
+  margin-left:12px;
+}
+.btn:hover{transform:translateY(-3px);}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(14,165,233,.25);
+}
+.card img,.card video{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.card-content{padding:18px;}
+.card h3{color:var(--primary);margin-bottom:6px;}
+.card p{font-size:15px;color:#475569;}
+
+/* ===== TABS ===== */
+.tabs{display:flex;gap:16px;margin-bottom:24px;}
+.tab{
+  padding:10px 20px;
+  border-radius:20px;
+  background:#e0f2fe;
+  color:#0369a1;
+  cursor:pointer;
+  font-weight:600;
+}
+.tab.active{background:var(--primary);color:#fff;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* ===== SKILLS ===== */
+.skills span{
+  display:inline-block;
+  padding:8px 14px;
+  margin:6px;
+  background:#e0f2fe;
+  border-radius:20px;
+  font-weight:600;
+  color:#0369a1;
+}
+
+/* ===== EDUCATION ===== */
+.edu{
+  border-left:4px solid var(--primary);
+  padding-left:20px;
+}
+.edu-item{
+  margin-bottom:26px;
+}
+.edu-item h3{color:#0f172a;}
+.edu-item span{
+  display:block;
+  color:var(--muted);
+  font-size:14px;
+  margin:4px 0;
+}
+
+/* ===== CERT ===== */
+.cert img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:.4s;
+}
+.cert img:hover{transform:scale(1.08);}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020617;
+  color:#cbd5f5;
+  padding:30px;
+  text-align:center;
+}
+footer a{
+  color:#38bdf8;
+  margin:0 12px;
+  font-size:22px;
+  text-decoration:none;
+}
+footer a:hover{color:#fff;}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-wrap">
+    <strong>Harini M</strong>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#cert">Certifications</a>
+      <a href="#other">Other</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="container hero">
+  <h1>Hi, I’m <span>Harini M</span></h1>
+  <p>Frontend-focused ECE graduate building clean, functional web & IoT systems.</p>
+  <br>
+  <a class="btn" href="#projects">View Projects</a>
+  <a class="btn outline" href="resume.pdf" download>Download Resume</a>
+</section>
+
+<!-- PROJECTS -->
+<section class="container" id="projects">
+  <h2>Projects</h2>
+
+  <div class="tabs">
+    <div class="tab active" onclick="openTab(0)">Selected Projects</div>
+    <div class="tab" onclick="openTab(1)">Current Projects</div>
+  </div>
+
+  <div class="tab-content active">
+    <div class="grid">
+      <div class="card"><img src="images/p1.jpg"><div class="card-content"><h3>ToxiScan</h3><p>IoT-based textile wastewater monitoring.</p></div></div>
+      <div class="card"><video src="videos/p2.mp4" muted autoplay loop></video><div class="card-content"><h3>Speed Breaker Detection</h3><p>OpenCV driver alert system.</p></div></div>
+      <div class="card"><img src="images/p3.jpg"><div class="card-content"><h3>ATM Banking System</h3><p>Java OOP banking simulation.</p></div></div>
+      <div class="card"><img src="images/p4.jpg"><div class="card-content"><h3>Portfolio Website</h3><p>Responsive web portfolio.</p></div></div>
+      <div class="card"><video src="videos/p5.mp4" muted autoplay loop></video><div class="card-content"><h3>UI/UX Case Study</h3><p>Usability-focused redesign.</p></div></div>
+      <div class="card"><img src="images/p6.jpg"><div class="card-content"><h3>Sensor Dashboard</h3><p>Real-time visualization.</p></div></div>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="grid">
+      <div class="card"><img src="images/current1.jpg"><div class="card-content"><h3>Smart Industry Monitor</h3><p>IoT + Cloud (In Progress)</p></div></div>
+      <div class="card"><video src="videos/current2.mp4" muted autoplay loop></video><div class="card-content"><h3>Advanced UI Dashboard</h3><p>Data-driven frontend</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container" id="skills">
+  <h2>Skill-Based Projects</h2>
+  <div class="skills">
+    <span>Java → ATM System</span>
+    <span>JavaScript → Interactive UI</span>
+    <span>IoT → ToxiScan</span>
+    <span>OpenCV → Detection System</span>
+    <span>UI/UX → Case Study</span>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="container" id="education">
+  <h2>Education</h2>
+  <div class="edu">
+
+    <div class="edu-item">
+      <h3>B.E – Electronics & Communication Engineering</h3>
+      <span>Sona College of Technology</span>
+      <span>CGPA: 8.2 / 10</span>
+    </div>
+
+    <div class="edu-item">
+      <h3>Higher Secondary (HSC)</h3>
+      <span>State Board</span>
+      <span>Percentage: 87%</span>
+    </div>
+
+    <div class="edu-item">
+      <h3>Secondary School (SSC)</h3>
+      <span>State Board</span>
+      <span>Percentage: 92%</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- OTHER PROJECTS -->
+<section class="container" id="other">
+  <h2>Other Projects</h2>
+  <ul>
+    <li><a href="#">GitHub Project Link 1</a></li>
+    <li><a href="#">GitHub Project Link 2</a></li>
+    <li><a href="#">HTML Project Page</a></li>
+  </ul>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="container" id="cert">
+  <h2>Certifications</h2>
+  <div class="grid">
+    <div class="cert"><img src="images/cert1.jpg"></div>
+    <div class="cert"><img src="images/cert2.jpg"></div>
+    <div class="cert"><img src="images/cert3.jpg"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <p>Connect with me</p>
+  <a href="mailto:harinim.22ece@sonatech.ac.in">✉</a>
+  <a href="#">in</a>
+  <a href="#">🐙</a>
+  <a href="tel:+919489664171">📞</a>
+  <p>© 2026 Harini M</p>
+</footer>
+
+<script>
+function openTab(i){
+  document.querySelectorAll('.tab').forEach((t,idx)=>{
+    t.classList.toggle('active',idx===i);
+    document.querySelectorAll('.tab-content')[idx].classList.toggle('active',idx===i);
+  });
+}
+</script>
+
+</body>
+</html>
