@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harini M | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
@@ -140,9 +141,7 @@ p{color:#334155;}
   border-left:4px solid var(--primary);
   padding-left:20px;
 }
-.edu-item{
-  margin-bottom:26px;
-}
+.edu-item{margin-bottom:26px;}
 .edu-item h3{color:#0f172a;}
 .edu-item span{
   display:block;
@@ -170,7 +169,7 @@ footer{
 footer a{
   color:#38bdf8;
   margin:0 12px;
-  font-size:22px;
+  font-size:18px;
   text-decoration:none;
 }
 footer a:hover{color:#fff;}
@@ -182,7 +181,7 @@ footer a:hover{color:#fff;}
 <!-- NAV -->
 <nav>
   <div class="nav-wrap">
-    <strong>Harini M</strong>
+    <strong>HARINI MOORTHY</strong>
     <div>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -196,11 +195,11 @@ footer a:hover{color:#fff;}
 
 <!-- HERO -->
 <section class="container hero">
-  <h1>Hi, I’m <span>Harini M</span></h1>
+  <h1>Hi, I’m <span>Harini Moorthy</span></h1>
   <p>Frontend-focused ECE graduate building clean, functional web & IoT systems.</p>
   <br>
   <a class="btn" href="#projects">View Projects</a>
-  <a class="btn outline" href="resume.pdf" download>Download Resume</a>
+  <a class="btn outline" href="HARINI M RESUMEE.pdf" target="_blank">Download Resume</a>
 </section>
 
 <!-- PROJECTS -->
@@ -208,25 +207,83 @@ footer a:hover{color:#fff;}
   <h2>Projects</h2>
 
   <div class="tabs">
-    <div class="tab active" onclick="openTab(0)">Selected Projects</div>
-    <div class="tab" onclick="openTab(1)">Current Projects</div>
+    <div class="tab active" onclick="openTab(0)">B.E. Projects</div>
+    <div class="tab" onclick="openTab(1)">UI-UX Projects</div>
+    <div class="tab" onclick="openTab(2)">Other Projects</div>
   </div>
 
+  <!-- B.E. Projects -->
   <div class="tab-content active">
     <div class="grid">
-      <div class="card"><img src="images/p1.jpg"><div class="card-content"><h3>ToxiScan</h3><p>IoT-based textile wastewater monitoring.</p></div></div>
-      <div class="card"><video src="videos/p2.mp4" muted autoplay loop></video><div class="card-content"><h3>Speed Breaker Detection</h3><p>OpenCV driver alert system.</p></div></div>
-      <div class="card"><img src="images/p3.jpg"><div class="card-content"><h3>ATM Banking System</h3><p>Java OOP banking simulation.</p></div></div>
-      <div class="card"><img src="images/p4.jpg"><div class="card-content"><h3>Portfolio Website</h3><p>Responsive web portfolio.</p></div></div>
-      <div class="card"><video src="videos/p5.mp4" muted autoplay loop></video><div class="card-content"><h3>UI/UX Case Study</h3><p>Usability-focused redesign.</p></div></div>
-      <div class="card"><img src="images/p6.jpg"><div class="card-content"><h3>Sensor Dashboard</h3><p>Real-time visualization.</p></div></div>
+      <div class="card">
+        <img src="toxiscan.jpeg" alt="ToxiScan project image">
+        <div class="card-content">
+          <h3>TOXISCAN<span style="color:red;font-size:small;"></span></h3>
+          <p>The invention relates to ToxiScan, a real-time chemical detection system for wastewater from textile industries. It integrates sensors to measure pH, TDS, turbidity, conductivity, ammonia, and dye levels. A microcontroller processes the sensor data to determine pollutant concentrations. The system uses an IoT module to enable remote monitoring and data logging. Alerts are generated when chemical levels exceed safe thresholds. The device is portable, low-cost, and easy to deploy. It provides continuous monitoring to ensure environmental compliance. Overall, ToxiScan promotes efficient wastewater management and environmental safety.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- UI-UX Projects -->
+  <div class="tab-content">
+    <div class="grid">
+      <div class="card">
+        <video src="project1.mp4" controls></video>
+        <div class="card-content">
+          <h3>Sign-up page</h3>
+          <p>A sign-up page that enables users to create an account quickly and securely</p>
+        </div>
+      </div>
+       <div class="card">
+        <video src="project2.mp4" controls></video>
+        <div class="card-content">
+          <h3>Email card</h3>
+          <p>An email advertisement card showcasing electronic gadgets to promote offers, features, and new arrivals</p>
+        </div>
+      </div>
+       <div class="card">
+        <video src="project3.mp4" controls></video>
+        <div class="card-content">
+          <h3>Food menu card</h3>
+          <p>A food menu card designed to display dishes clearly and attractively for easy selection.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project4.jpeg"></img>
+        <div class="card-content">
+          <h3>Ticket Booking</h3>
+          <p>A Disney movie ticket booking page designed for quick seat selection and a smooth booking experience.</p>
+        </div>
+      </div>
+      <div class="card">
+        <video src="project5.mp4" controls></video>
+        <div class="card-content">
+          <h3>Foodzy App</h3>
+          <p>A food ordering app designed for easy menu browsing, quick ordering, and seamless checkout.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project6.jpeg"></img>
+        <div class="card-content">
+          <h3>TickRush Site</h3>
+          <p>Browse our latest collection and choose your perfect timepiece. Order online easily and get it delivered straight to your doorstep..</p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Other Projects -->
   <div class="tab-content">
     <div class="grid">
-      <div class="card"><img src="images/current1.jpg"><div class="card-content"><h3>Smart Industry Monitor</h3><p>IoT + Cloud (In Progress)</p></div></div>
-      <div class="card"><video src="videos/current2.mp4" muted autoplay loop></video><div class="card-content"><h3>Advanced UI Dashboard</h3><p>Data-driven frontend</p></div></div>
+      <div class="card">
+        <img src="project7.jpeg"></img>
+        <div class="card-content">
+          <h3><a href="#">GitHub Link</a></h3>
+          <p>IoT + Cloud (In Progress)</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -235,11 +292,14 @@ footer a:hover{color:#fff;}
 <section class="container" id="skills">
   <h2>Skill-Based Projects</h2>
   <div class="skills">
-    <span>Java → ATM System</span>
-    <span>JavaScript → Interactive UI</span>
-    <span>IoT → ToxiScan</span>
-    <span>OpenCV → Detection System</span>
-    <span>UI/UX → Case Study</span>
+    <span>UI/UX</span>
+    <span>Java</span>
+    <span>IoT</span>
+    <span>Web Development</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Figma</span>
   </div>
 </section>
 
@@ -247,57 +307,51 @@ footer a:hover{color:#fff;}
 <section class="container" id="education">
   <h2>Education</h2>
   <div class="edu">
-
     <div class="edu-item">
       <h3>B.E – Electronics & Communication Engineering</h3>
       <span>Sona College of Technology</span>
-      <span>CGPA: 8.2 / 10</span>
+      <span>CGPA: 7.57</span>
     </div>
-
     <div class="edu-item">
-      <h3>Higher Secondary (HSC)</h3>
-      <span>State Board</span>
-      <span>Percentage: 87%</span>
+      <h3>Higher Secondary Education (HSE)</h3>
+      <span>Royal Park School (State Board)</span>
+      <span>Percentage: 70%</span>
     </div>
-
     <div class="edu-item">
-      <h3>Secondary School (SSC)</h3>
-      <span>State Board</span>
-      <span>Percentage: 92%</span>
+      <h3>Secondary School Education (SSE)</h3>
+      <span>Royal Park School (State Board)</span>
+      <span>Percentage: 94%</span>
     </div>
-
   </div>
 </section>
 
-<!-- OTHER PROJECTS -->
-<section class="container" id="other">
-  <h2>Other Projects</h2>
-  <ul>
-    <li><a href="#">GitHub Project Link 1</a></li>
-    <li><a href="#">GitHub Project Link 2</a></li>
-    <li><a href="#">HTML Project Page</a></li>
-  </ul>
-</section>
-
-<!-- CERTIFICATIONS -->
+<!-- CERTIFICATIONS-->
 <section class="container" id="cert">
   <h2>Certifications</h2>
   <div class="grid">
-    <div class="cert"><img src="images/cert1.jpg"></div>
-    <div class="cert"><img src="images/cert2.jpg"></div>
-    <div class="cert"><img src="images/cert3.jpg"></div>
+    <div class="cert"><img src="APTITHON.jpeg"></div>
+    <div class="cert"><img src="CLOUD COMPUTING.jpeg"></div>
+    <div class="cert"><img src="FULL STACK.jpeg"></div>
+    <div class="cert"><img src="ELECTROBLITZ.jpeg"></div>
+    <div class="cert"><img src="BEST USER.jpeg"></div>
+    <div class="cert"><img src="TECHATHON.jpeg"></div>
+    <div class="cert"><img src="SPEAKERS FORUM.jpeg"></div>
+    <div class="cert"><img src="SPEAKERS FORUM 2.jpeg"></div>
+    <div class="cert"><img src="iot.jpeg"></div>
+    <div class="cert"><img src="pcb.jpeg"></div>
   </div>
 </section>
 
 <!-- FOOTER -->
+
 <footer id="contact">
   <p>Connect with me</p>
-  <a href="mailto:harinim.22ece@sonatech.ac.in">✉</a>
-  <a href="#">in</a>
-  <a href="#">🐙</a>
-  <a href="tel:+919489664171">📞</a>
+  <a href="mailto:harinim.22ece@sonatech.ac.in"><i class="fa-solid fa-envelope"></i></a>
+  <a href="https://linkedin.com/in/harinimoorthy" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="tel:+919489664171"><i class="fa-solid fa-phone"></i></a>
   <p>© 2026 Harini M</p>
 </footer>
+
 
 <script>
 function openTab(i){
